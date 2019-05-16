@@ -1,0 +1,68 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<section>
+<div class = 'myclasssize' >
+        <div class = 'topbar'>
+            <h1 id = 'about'>ABOUT</h1>
+                <div id = 'logo'>
+                 <img id = 'SPFClogo'src="../assets/SaoPaulo.png" alt="Sao Paulo Team logo">
+                </div>
+        </div>
+
+      <div class = 'winbar'>
+        <table id = 'barcontent' style="box-shadow: inset 0px 0px 0px 2px white">
+          <td style ="border-right: 1.3pt solid white; width: 25px; "><img src="../assets/D.svg" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/L.svg" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/L.svg" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/W.svg" style = "margin-top: 6px;"></td>
+          <td><img src="../assets/W.svg" style = "margin-top: 6px;"></td>
+        </table>
+      </div>
+
+      <div class = 'previousMatch'>
+        <p style = "margin: 0">PREVIOUS MATCH</p>
+            <table id = 'previousMatchContent'>
+                <tr style = "vertical-align: bottom">
+                    <td style = "text-align: right"><img src="../assets/1776.png" width="36" height="36" style = "margin-right: 20px">Sao Paulo</td>
+                    <td id = 'score'>1 - 0</td>
+                    <td style = "text-align: left">Palmeiras<img src="../assets/Palmeiras.png" width="36" height="36" style = "margin-left: 20px"></td>
+                </tr>
+
+                <tr style = "text-align: center; vertical-align: bottom">
+                    <td colspan = 3 ><span style = " background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 7px 15px 7px 15px;">April 20</span></td>
+                </tr>
+            </table>
+      </div>
+
+
+      <div class  = 'previousMatch' >
+        <p style = "margin: 0">NEXT MATCH</p>
+        <table id = 'previousMatchContent'>
+            <tr style = "vertical-align: bottom">
+                <td style = "text-align: right"><img src="../assets/Corinthians.png" width="31" height="36" style = "margin-right: 20px">Corinthians</td>
+                <td id = 'score'> - </td>
+                <td style = "text-align: left">Sao Paulo<img src="../assets/SaoPaulo.png" width="36" height="36" style = "margin-left: 20px"></td>
+            </tr>
+
+            <tr style = "text-align: center; vertical-align: bottom">
+                <td colspan = 3 ><span style = " background-color: #e3e3e3; border-radius: 10px 10px 0px 0px;; padding: 7px 15px 7px 15px ;">April 20 11:00</span></td>
+            </tr>
+        </table>
+      </div>
+
+      <div class = 'navbar'>
+            <ul style="">
+                <li><a class="active" routerLink="/H2H">H2H</a></li>
+                <li style = "border-left: 1.3pt solid white"><a routerLink="/pastGames">PAST GAMES</a></li>
+                <li style = "border-right: 1.3pt solid white; border-left: 1.3pt solid white;"><a routerLink="/upcomingGames">UPCOMING GAMES</a></li>
+                <li style = "border-right: 1.3pt solid white; "><a routerLink="/table">TABLE</a></li>
+                <li ><a routerLink="/squad">SQUAD</a></li>
+            </ul>
+      </div>
+  </div>
+</section>
+
+
+
+<router-outlet >
+  
+</router-outlet>
