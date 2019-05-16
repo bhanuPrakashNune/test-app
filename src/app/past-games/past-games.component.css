@@ -17,11 +17,12 @@
   .previousMatch { 
     position: relative;
     top: 30px;
+    margin: auto;
   }
   
   #previousMatchContent{
     border: 2px solid #e3e3e3;
-    width: 600px;
+    width: 45%;
     height: 80px;  
     font-family: 'Montserrat', sans-serif;
     color: black;
