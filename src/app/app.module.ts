@@ -11,6 +11,7 @@ import { UpcomingGamesComponent } from './upcoming-games/upcoming-games.componen
 import { TableComponent } from './table/table.component';
 import { SquadComponent } from './squad/squad.component'
 import { NetworkModule } from './network/network.module'
+import { DatePipe} from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NetworkModule } from './network/network.module'
       {path: 'squad' , component : SquadComponent }
     ])
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
