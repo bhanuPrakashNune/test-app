@@ -1,0 +1,42 @@
+
+  p{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.23em;
+    text-align: center;
+  }
+  
+  table{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .previousMatch { 
+    position: relative;
+    top: 30px;
+  }
+  
+  #previousMatchContent{
+    border: 2px solid #e3e3e3;
+    width: 600px;
+    height: 80px;  
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+  
+  #score{
+    width:50px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+  
+  }
