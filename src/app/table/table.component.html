@@ -12,7 +12,11 @@
     </thead>
     <tbody>
         <tr *ngFor="let item of standings">
+<<<<<<< HEAD
             <td style="font-weight:700; width: 32px; height: 32px;">{{item.position}}</td>
+=======
+            <td style="font-weight:500; width: 32px; height: 32px;">{{item.position}}</td>
+>>>>>>> 146b536f91f704f2bc5b6d62b2cbd9fb0484b526
             <td style="width: 30px;"><img src = "../assets/{{item.team.id}}.png" width="20" height="20"></td>
             <td style="width: 70px; text-align: center">{{item.team.name}}</td>
             <td style="width: 200px; height: 32px; text-align: right; padding: 0px 20px;">{{item.playedGames}}</td>
