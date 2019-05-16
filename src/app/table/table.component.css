@@ -1,0 +1,45 @@
+#all_list{
+    background: #E3E3E3;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.23em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+table{
+    border-spacing: 0px; 
+}
+
+tr:nth-child(even) {
+    background:#E3E3E3;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 250;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.23em;
+
+    
+   
+   
+}
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 250;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.23em;
+
+}
+
+
+

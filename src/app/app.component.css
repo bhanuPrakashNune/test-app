@@ -1,0 +1,241 @@
+.myclasssize{
+  height: 687px;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.23em;
+  text-align: center;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: black;
+}
+
+li {
+float: left;
+}
+
+
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 15px 110px;
+text-decoration: none;
+border-bottom: 5px solid transparent;
+}
+
+li a:focus{
+border-bottom: 5px solid red;
+}
+
+.topbar{
+  background-color: black;
+  height: 80px;
+  margin: 0;
+  padding: 10px;
+}
+
+.winbar{
+ position: relative;
+ top: 100px;
+}
+
+.previousMatch { 
+  position: relative;
+  top: 140px;
+}
+
+.navbar{
+  position: relative;
+  top: 220px;
+  width: 100%;
+  float: center;
+  padding: 1060;
+  background-color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+  vertical-align: middle;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 55px;
+  text-align: center;
+  letter-spacing: 0.23em;
+}
+
+#tnav{
+  text-align: center;     
+}
+
+#about {
+  font-family: 'Montserrat', sans-serif;
+  vertical-align: middle;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 80px;
+  text-align: right;
+  letter-spacing: 0.23em;
+  margin: 0;
+}
+
+#SPFClogo{
+  position: absolute;
+  margin-left: -90px;
+  top: 0;
+  width: 180px;
+  height: 180px;
+}
+
+#logo{
+  text-align: center;
+}
+
+
+#barcontent{
+  background-color: #e3e3e3;
+  border-radius: 25px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.23em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#previousMatchContent{
+  border-radius: 25px;
+  border: 2px solid #e3e3e3;
+  width: 400px;
+  height: 80px;  
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.15em;
+}
+
+#score{
+  width:50px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+
+}
+
+@media screen and (max-width: 1950px) {
+  li a{
+    padding: 15px 100px;
+  }
+}
+@media screen and (max-width: 1900px) {
+  li a{
+    padding: 15px 100px;
+  }
+}
+@media screen and (max-width: 1850px) {
+  li a{
+    padding: 15px 95px; 
+  }
+}
+@media screen and (max-width: 1800px) {
+  li a{
+    padding: 15px 90px; 
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  li a{
+    padding: 15px 85px; 
+  }
+}
+@media screen and (max-width: 1700px) {
+  li a{
+    padding: 15px 80px; 
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  li a{
+    padding: 15px 75px; 
+  }
+}
+@media screen and (max-width: 1550px) {
+  li a{
+    padding: 15px 70px; 
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  li a{
+    padding: 15px 65px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  li a{
+    padding: 15px 60px; 
+  }
+}
+@media screen and (max-width: 1400px) {
+  li a{
+    padding: 15px 55px; 
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  li a{
+    padding: 15px 50px; 
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  li a{
+    padding: 15px 45px; 
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  li a{
+    padding: 15px 40px; 
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  li a{
+    padding: 15px 30px; 
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  li {
+  float: none;
+  border-left: 0pt;
+  border-right: 0pt;
+  width: 100%;
+  }
+  .myclasssize{
+    height: 1050px;
+  }
+  
+}
