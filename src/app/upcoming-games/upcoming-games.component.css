@@ -42,26 +42,15 @@
   
   }
 
- 
-
-  
-
 table#previousMatchContent:nth-child(even) {
     background:#E3E3E3;
- 
-   
 }
 
 table:nth-child(even) tr td#mylistcolor{
-  
   background:#E3E3E3;
-
- 
 }
 table#previousMatchContent:nth-child(odd)  {
     background-color: #FFFFFF;
-   
-
 }
 
 span {

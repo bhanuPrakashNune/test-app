@@ -43,6 +43,10 @@ li a:focus{
 border-bottom: 5px solid red;
 }
 
+li a:hover{
+  border-bottom: 5px solid red;
+  }
+
 .topbar{
   background-color: black;
   height: 80px;
