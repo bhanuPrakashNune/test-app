@@ -36,7 +36,7 @@ export class UpcomingGamesComponent implements OnInit {
   }
 
   getDate(match: Match): string{
-   let date = this.datepipe.transform(match.utcDate, 'MMM dd, HH:mm');
+   let date = this.datepipe.transform(match.utcDate, 'MMMM dd');
    return date;
   }
 
