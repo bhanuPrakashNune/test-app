@@ -21,7 +21,7 @@
   
   #previousMatchContent{
     border: 2px solid #e3e3e3;
-    width: 600px;
+    width: 40%;
     height: 80px;  
     font-family: 'Montserrat', sans-serif;
     color: black;
@@ -33,14 +33,7 @@
     margin-bottom: 10px;
   }
   
-  #score{
-    width:50px;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-weight: 500;
-    font-size: 12px;
-  
-  }
+
 
 table#previousMatchContent:nth-child(even) {
     background:#E3E3E3;
@@ -51,6 +44,14 @@ table:nth-child(even) tr td#mylistcolor{
 }
 table#previousMatchContent:nth-child(odd)  {
     background-color: #FFFFFF;
+}
+
+a {
+  width:50px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 span {
