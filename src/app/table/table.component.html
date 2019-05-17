@@ -3,7 +3,7 @@
     <thead id = 'all_list'>
           <td style="width: 32px; height: 32px;">POS</td>
           <td style="width: 30px;"></td>
-          <td style="width: 70px; text-align: center">TEAM</td>
+          <td style="width: 70px; text-align: left">TEAM</td>
           <td style="width: 200px; height: 32px; text-align: right; padding: 0px 20px;">GP</td>
           <td style="width: 32px; height: 32px;">W</td>
           <td style="width: 32px; height: 32px;">D</td>
@@ -14,7 +14,7 @@
         <tr *ngFor="let item of standings">
             <td style="font-weight:500; width: 32px; height: 32px;">{{item.position}}</td>
             <td style="width: 30px;"><img src = "../assets/{{item.team.id}}.png" width="20" height="20"></td>
-            <td style="width: 70px; text-align: center">{{item.team.name}}</td>
+            <td style="font-size: 13px; width: 70px; text-align: left;">{{item.team.name}}</td>
             <td style="width: 200px; height: 32px; text-align: right; padding: 0px 20px;">{{item.playedGames}}</td>
             <td style="width: 32px; height: 32px;">{{item.won}}</td>
             <td style="width: 32px; height: 32px;">{{item.draw}}</td>
