@@ -22,7 +22,7 @@ export class TableComponent implements OnInit {
   private async getStandings(): Promise<void> {
     try {
       const result: IAjaxResponse = await this.footballService.getStandings();
-      console.log(result.data);
+      
       if (!!result.data) {
         let data: IStandingsResponseData = result.data;
         this.standings = data.standings[0].table;

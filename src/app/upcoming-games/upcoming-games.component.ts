@@ -24,7 +24,7 @@ export class UpcomingGamesComponent implements OnInit {
   private async getStandings(): Promise<void> {
     try {
       const result: IAjaxResponse = await this.footballService.getUpcomingGames();
-      console.log(result.data);
+      
       if (!!result.data) {
         let data: IUpcomingGamesResponseData = result.data;
         this.upcomingGames = data.matches;
