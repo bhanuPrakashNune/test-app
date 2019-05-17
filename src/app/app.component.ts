@@ -34,6 +34,6 @@ export class AppComponent implements OnInit {
   }
 
   private sortMatches(match1: Match, match2: Match): number {
-    return match1.matchday > match2.matchday ? 1 : -1;
+    return match1.matchday < match2.matchday ? 1 : -1;
   }
 }

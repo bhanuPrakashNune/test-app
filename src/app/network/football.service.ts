@@ -24,4 +24,8 @@ export class FootballService extends HttpService {
     return this.httpGet(url);
   }
 
+  getPastGames(): Promise<IAjaxResponse> {
+    const url: string = 'http://api.football-data.org/v2/teams/1776/matches?status=FINISHED';
+    return this.httpGet(url);
+  }
 }
