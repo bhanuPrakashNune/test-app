@@ -6,9 +6,9 @@
             <td id ='mylistcolor' style="text-align: center">
              
                 <table>
-                  <tr style = "line-height: 40px">{{item.homeTeam.name}} {{item.score.fullTime.homeTeam}} - {{item.score.fullTime.awayTeam}} {{item.awayTeam.name}}</tr>
+                  <tr style = "line-height: 40px">{{item.homeTeam.name}} <a style="font-weight:500px">{{item.score.fullTime.homeTeam}} - {{item.score.fullTime.awayTeam}}</a> {{item.awayTeam.name}}</tr>
                   <tr style = "text-align: center; vertical-align: bottom">
-                    <td><span>{{getDate(item)}}</span></td>
+                    <td><span id = 'wrapper'>{{getDate(item)}}</span></td>
                   </tr>
                 </table>
               

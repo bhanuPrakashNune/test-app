@@ -14,12 +14,21 @@
         <tr *ngFor="let item of standings">
             <td style="font-weight:500; width: 32px; height: 32px;">{{item.position}}</td>
             <td style="width: 30px;"><img src = "../assets/{{item.team.id}}.png" width="20" height="20"></td>
+<<<<<<< HEAD
             <td style="font-size: 13px; width: 400px; text-align: left;">{{item.team.name}}</td>
             <td style="width: 200px; height: 32px; text-align: right; padding: 0px 20px;">{{item.playedGames}}</td>
             <td style="width: 32px; height: 32px;">{{item.won}}</td>
             <td style="width: 32px; height: 32px;">{{item.draw}}</td>
             <td style="width: 32px; height: 32px;">{{item.lost}}</td>
             <td style="width: 32px; height: 32px;">{{item.points}}</td>
+=======
+            <td style="font-size: 14px; width: 70px; text-align: left;">{{item.team.name}}</td>
+            <td style="font-size: 14px; width: 200px; height: 32px; text-align: right; padding: 0px 20px;">{{item.playedGames}}</td>
+            <td style="font-size: 14px; width: 32px; height: 32px;">{{item.won}}</td>
+            <td style="font-size: 14px; width: 32px; height: 32px;">{{item.draw}}</td>
+            <td style="font-size: 14px; width: 32px; height: 32px;">{{item.lost}}</td>
+            <td style="font-size: 14px; width: 32px; height: 32px;">{{item.points}}</td>
+>>>>>>> 73a19ae7e48e0fe8449a72800a5c2f846509a718
         </tr>
     </tbody>
   </table>
