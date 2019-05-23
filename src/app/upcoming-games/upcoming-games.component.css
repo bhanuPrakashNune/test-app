@@ -65,3 +65,10 @@ table#previousMatchContent:nth-child(even) span{
 
  
 }
+
+
+@media screen and (max-width: 600px) {
+  #previousMatchContent{
+    width: 100%;
+  }
+}

@@ -4,58 +4,71 @@
         <div class = 'topbar'>
             <h1 id = 'about'>ABOUT</h1>
                 <div id = 'logo'>
-                 <img id = 'SPFClogo'src="../assets/1776.png" alt="Sao Paulo Team logo">
+                 <img class = 'fade-in'id = 'SPFClogo'src="../assets/1776.png" alt="Sao Paulo Team logo">
                 </div>
         </div>
 
       <div class = 'winbar'>
         <table id = 'barcontent' style="box-shadow: inset 0px 0px 0px 2px white">
-          <td style ="border-right: 1.3pt solid white; width: 25px; "><img src="../assets/D.svg" style = "margin-top: 6px;"></td>
-          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/L.svg" style = "margin-top: 6px;"></td>
-          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/L.svg" style = "margin-top: 6px;"></td>
-          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/W.svg" style = "margin-top: 6px;"></td>
-          <td><img src="../assets/W.svg" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px; "><img src="../assets/{{lastFive[0]}}" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/{{lastFive[1]}}" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/{{lastFive[2]}}" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/{{lastFive[3]}}" style = "margin-top: 6px;"></td>
+          <td><img src="../assets/{{lastFive[4]}}" style = "margin-top: 6px;"></td>
         </table>
       </div>
 
-      <div class = 'previousMatch'>
+      <div class = 'previousMatch slide-in-left'>
         <p style = "margin: 0">PREVIOUS MATCH</p>
             <table id = 'previousMatchContent'>
-                <tr style = "vertical-align: bottom">
-                    <td style = "text-align: right"><img src="../assets/1776.png" width="36" height="36" style = "margin-right: 20px">Sao Paulo</td>
-                    <td id = 'score'>-</td>
-                    <td style = "text-align: left">Palmeiras<img src="../assets/Palmeiras.png" width="36" height="36" style = "margin-left: 20px"></td>
-                </tr>
 
-                <tr style = "text-align: center; vertical-align: bottom">
-                    <td colspan = 3 ><span style = " background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 7px 15px 7px 15px;">April 20</span></td>
-                </tr>
+                <tr  style = "vertical-align: bottom; padding: 10px">
+                  <td><img src="../assets/{{pastGame.homeTeam.id}}.png" width="50" height="50" style = "margin-left: 30px"></td>
+                  <td id ='mylistcolor' style="text-align: center">
+                   
+                      <table>
+                        <tr style = "line-height: 40px">{{pastGame.homeTeam.name}} {{pastGame.score.fullTime.homeTeam}} - {{pastGame.score.fullTime.awayTeam}} {{pastGame.awayTeam.name}}</tr>
+                        <tr style = "text-align: center; vertical-align: bottom">
+                          <td><span>{{getDate(pastGame)}}</span></td>
+                        </tr>
+                      </table>
+                    
+                  </td>
+                  <td><img src="../assets/{{pastGame.awayTeam.id}}.png" width="50" height="50" style = "margin-right: 30px"></td>
+              </tr>
             </table>
       </div>
 
 
-      <div class  = 'nextMatch' >
+      <div class  = 'nextMatch slide-in-right' >
         <p style = "margin: 0">NEXT MATCH</p>
         <table id = 'previousMatchContent'>
-            <tr style = "vertical-align: bottom">
-                <td style = "text-align: right"><img src="../assets/Corinthians.png" width="31" height="36" style = "margin-right: 20px">Corinthians</td>
-                <td id = 'score'> - </td>
-                <td style = "text-align: left">Sao Paulo<img src="../assets/SaoPaulo.png" width="36" height="36" style = "margin-left: 20px"></td>
-            </tr>
-
-            <tr style = "text-align: center; vertical-align: bottom">
-                <td colspan = 3 ><span style = " background-color: #e3e3e3; border-radius: 10px 10px 0px 0px;; padding: 7px 15px 7px 15px ;">April 20 11:00</span></td>
-            </tr>
+            
+            <tr  style = "vertical-align: bottom; padding: 10px">
+              <td><img src="../assets/{{upcomingGames.homeTeam.id}}.png" width="50" height="50" style = "margin-left: 30px"></td>
+              <td id ='mylistcolor' style="text-align: center">
+               
+                  <table>
+                    <tr style = "line-height: 40px">{{upcomingGames.homeTeam.name}} - {{upcomingGames.awayTeam.name}}</tr>
+                    <tr style = "text-align: center; vertical-align: bottom">
+                      <td><span>{{getDate(upcomingGames)}}</span></td>
+                    </tr>
+                  </table>
+                
+              </td>
+              <td><img src="../assets/{{upcomingGames.awayTeam.id}}.png" width="50" height="50" style = "margin-right: 30px"></td>
+          </tr>
         </table>
+        
       </div>
 
       <div class = 'navbar'>
             <ul >
-                <li><a class="active" routerLink="/H2H">H2H</a></li>
-                <li style = "border-left: 1.3pt solid white"><a routerLink="/pastGames">PAST GAMES</a></li>
-                <li style = "border-right: 1.3pt solid white; border-left: 1.3pt solid white;"><a routerLink="/upcomingGames">UPCOMING GAMES</a></li>
-                <li style = "border-right: 1.3pt solid white; "><a routerLink="/table">TABLE</a></li>
-                <li ><a routerLink="/squad">SQUAD</a></li>
+                <li id ='li-h2h'><a class="active" routerLink="/H2H">H2H</a></li>
+                <li id ='li-pg'><a routerLink="/pastGames">PAST GAMES</a></li>
+                <li id ='li-tb'><a id="a-tb" routerLink="/table">TABLE</a></li>
+                <li id ='li-ug'><a routerLink="/upcomingGames">UPCOMING GAMES</a></li>
+                <li id ='li-sq'><a routerLink="/squad">SQUAD</a></li>
             </ul>
       </div>
   </div>

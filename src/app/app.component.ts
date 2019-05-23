@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient,HttpHeaders} from '@angular/common/http';
-import { IMatchResponseData, MatchResponseData, Match } from './entity/match';
+import { FootballService } from '../../src/app/network/football.service';
+import { IUpcomingGamesResponseData } from '../../src/app/entity/upcomingGames';
+import {Match} from '../../src/app/entity/match';
+import { IAjaxResponse } from '../../src/app/network/http/ajaxresponse';
+import {DatePipe } from '@angular/common'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,31 +13,97 @@ import { IMatchResponseData, MatchResponseData, Match } from './entity/match';
 })
 
 export class AppComponent implements OnInit {
-  title = 'test-app';
-  matchData: MatchResponseData;
+  
+  upcomingGames : Match ;
+  pastGames : Match[] = [];
+  pastGame : Match;
+  lastFive: string[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private footballService: FootballService,public datepipe: DatePipe, private router: Router) {
   }
 
   ngOnInit() : void{
-    this.getMatches();
+    this.getStandings();
+    this.getPastGames();
+    this.router.navigate(['/table']);
+    document.getElementById("a-tb").focus();
+  }
+  private async getStandings(): Promise<void> {
+    try {
+      const result: IAjaxResponse = await this.footballService.getUpcomingGames();
+      
+      if (!!result.data) {
+        let data: IUpcomingGamesResponseData = result.data;
+        this.upcomingGames = data.matches[0];
+
+        
+        
+      }
+    } catch (err) {
+      console.error('Error occurred in retrieving matches: ' + err);
+    }
   }
 
-  private getMatches(): void {
-    const headers = new HttpHeaders({
-      "X-Auth-Token": "6762f97d76994839b28307d65e54f35c",
-    });
-    this.http.get("http://api.football-data.org/v2/competitions/BSA/matches", {headers}).subscribe(data => {
+  private async getPastGames(): Promise<void> {
+    try {
+      const result: IAjaxResponse = await this.footballService.getPastGames();
       
-      this.matchData = new MatchResponseData();
-      let matchResponseData = <IMatchResponseData> data;
-      this.matchData.copy(matchResponseData);
-      let sortedMatches = this.matchData.matches.sort(this.sortMatches);
-     
-    });
+      if (!!result.data) {
+        let data: IUpcomingGamesResponseData = result.data;
+        this.lastFivematch(data.matches);
+        this.pastGames = data.matches.sort(this.sortMatches);
+        this.pastGame = this.pastGames[0];
+        
+      }
+    } catch (err) {
+      console.error('Error occurred in retrieving matches: ' + err);
+    }
   }
 
   private sortMatches(match1: Match, match2: Match): number {
     return match1.matchday < match2.matchday ? 1 : -1;
   }
+
+  getDate(match: Match): string{
+   let date = this.datepipe.transform(match.utcDate, 'MMM dd, HH:mm');
+   return date;
+  }
+
+  lastFivematch(match: Match[]){
+
+    for(let i = 0; i < match.length ; i++){
+     var temp = match[i];
+
+     var home = temp.homeTeam.name;
+     var away = temp.awayTeam.name;
+
+     if(home = "São Paulo FC"){
+       
+       if(temp.score.winner == "AWAY_TEAM"){
+          this.lastFive[i] = "L.svg";
+       }if(temp.score.winner == "DRAW"){
+          this.lastFive[i] = "D.svg"
+       }if(temp.score.winner == "HOME_TEAM"){
+          this.lastFive[i] = "W.svg"
+       }
+
+     }else if(away = "São Paulo FC"){
+      
+      if(temp.score.winner == "AWAY_TEAM"){
+        this.lastFive[i] = "W.svg";
+     }if(temp.score.winner == "DRAW"){
+        this.lastFive[i] = "D.svg"
+     }if(temp.score.winner == "HOME_TEAM"){
+        this.lastFive[i] = "L.svg"
+     }
+
+     }
+
+
+    }
+
+
+  }
+
+
 }

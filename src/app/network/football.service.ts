@@ -15,17 +15,17 @@ export class FootballService extends HttpService {
   }
 
   getStandings(): Promise<IAjaxResponse> {
-    const url: string = 'http://api.football-data.org/v2/competitions/BSA/standings';
+    const url: string = 'https://api.football-data.org/v2/competitions/BSA/standings';
     return this.httpGet(url);
   }
 
   getUpcomingGames(): Promise<IAjaxResponse> {
-    const url: string = 'http://api.football-data.org/v2/teams/1776/matches?status=SCHEDULED';
+    const url: string = 'https://api.football-data.org/v2/teams/1776/matches?status=SCHEDULED';
     return this.httpGet(url);
   }
 
   getPastGames(): Promise<IAjaxResponse> {
-    const url: string = 'http://api.football-data.org/v2/teams/1776/matches?status=FINISHED';
+    const url: string = 'https://api.football-data.org/v2/teams/1776/matches?status=FINISHED';
     return this.httpGet(url);
   }
 }
