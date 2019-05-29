@@ -38,7 +38,7 @@ export class PastGamesComponent implements OnInit {
   }
 
   getDate(match: Match): string{
-    let date = this.datepipe.transform(match.utcDate, 'MMMM dd');
+    let date = this.datepipe.transform(match.utcDate, 'MMM dd');
     return date;
    }
 

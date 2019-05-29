@@ -48,10 +48,10 @@ export class AppComponent implements OnInit {
     try {
       const result: IAjaxResponse = await this.footballService.getPastGames();
       
-      if (!!result.data) {
+      if (result.data) {
         let data: IUpcomingGamesResponseData = result.data;
-        this.lastFivematch(data.matches);
         this.pastGames = data.matches.sort(this.sortMatches);
+        this.lastFivematch(this.pastGames);
         this.pastGame = this.pastGames[0];
         
       }
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
      var home = temp.homeTeam.name;
      var away = temp.awayTeam.name;
 
-     if(home = "São Paulo FC"){
+     if(home == "São Paulo FC"){
        
        if(temp.score.winner == "AWAY_TEAM"){
           this.lastFive[i] = "L.svg";
@@ -87,7 +87,7 @@ export class AppComponent implements OnInit {
           this.lastFive[i] = "W.svg"
        }
 
-     }else if(away = "São Paulo FC"){
+     }else if(away == "São Paulo FC"){
       
       if(temp.score.winner == "AWAY_TEAM"){
         this.lastFive[i] = "W.svg";

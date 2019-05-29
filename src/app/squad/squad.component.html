@@ -1,4 +1,54 @@
+<section>
 
-<p>
-  squad works!
-</p>
+  <table style="margin-left: auto; margin-right:auto; width: 30%; height: 70px; ">
+    <thead id='all_list'>
+      <tr>
+       GOALKEEPERS
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of goalKeepers">
+       {{item}}
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <table style="margin-left: auto; margin-right:auto; width: 30%; height: 70px; ">
+    <thead id='all_list'>
+      <tr>
+       MIDFIELDERS
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of midfielders" >
+        {{item}}
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <table style="margin-left: auto; margin-right:auto; width: 30%; height: 70px; ">
+    <thead id='all_list'>
+      <tr>
+       DEFENDERS
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of defenders" >
+        {{item}}
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <table style="margin-left: auto; margin-right:auto; width: 30%; height: 70px; ">
+    <thead id='all_list'>
+      <tr>
+       STRIKERS
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of strikers" >
+        {{item}}
+      </tr>
+    </tbody>
+  </table>
+</section>

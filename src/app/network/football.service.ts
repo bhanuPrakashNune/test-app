@@ -28,4 +28,11 @@ export class FootballService extends HttpService {
     const url: string = 'https://api.football-data.org/v2/teams/1776/matches?status=FINISHED';
     return this.httpGet(url);
   }
+
+  getSquad(): Promise<IAjaxResponse> {
+    const url: string = 'https://api.football-data.org/v2/teams/1776';
+    return this.httpGet(url);
+  }
+
+
 }

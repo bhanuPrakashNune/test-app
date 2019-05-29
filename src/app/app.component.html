@@ -10,11 +10,11 @@
 
       <div class = 'winbar'>
         <table id = 'barcontent' style="box-shadow: inset 0px 0px 0px 2px white">
-          <td style ="border-right: 1.3pt solid white; width: 25px; "><img src="../assets/{{lastFive[0]}}" style = "margin-top: 6px;"></td>
-          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/{{lastFive[1]}}" style = "margin-top: 6px;"></td>
-          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/{{lastFive[2]}}" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px; "><img src="../assets/{{lastFive[4]}}" style = "margin-top: 6px;"></td>
           <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/{{lastFive[3]}}" style = "margin-top: 6px;"></td>
-          <td><img src="../assets/{{lastFive[4]}}" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/{{lastFive[2]}}" style = "margin-top: 6px;"></td>
+          <td style ="border-right: 1.3pt solid white; width: 25px"><img src="../assets/{{lastFive[1]}}" style = "margin-top: 6px;"></td>
+          <td><img src="../assets/{{lastFive[0]}}" style = "margin-top: 6px;"></td>
         </table>
       </div>
 
@@ -27,7 +27,7 @@
                   <td id ='mylistcolor' style="text-align: center">
                    
                       <table>
-                        <tr style = "line-height: 40px">{{pastGame.homeTeam.name}} {{pastGame.score.fullTime.homeTeam}} - {{pastGame.score.fullTime.awayTeam}} {{pastGame.awayTeam.name}}</tr>
+                        <tr style = "line-height: 40px">{{pastGame.homeTeam.name}} <a id ='fs'style="font-weight:500px">{{pastGame.score.fullTime.homeTeam}} - {{pastGame.score.fullTime.awayTeam}} </a>{{pastGame.awayTeam.name}}</tr>
                         <tr style = "text-align: center; vertical-align: bottom">
                           <td><span>{{getDate(pastGame)}}</span></td>
                         </tr>
