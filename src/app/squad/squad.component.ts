@@ -29,10 +29,6 @@ export class SquadComponent implements OnInit {
         let data: ISquad = result.data;
         this.players = data.squad;
         this.sortPlayers(this.players);
-        console.log(this.goalKeepers);
-        console.log(this.midfielders);
-        console.log(this.defenders);
-        console.log(this.strikers);
       }
     } catch (err) {
       console.error('Error occurred in retrieving matches: ' + err);
@@ -49,18 +45,22 @@ export class SquadComponent implements OnInit {
 
         case "Goalkeeper": {
           this.goalKeepers.push(player.name);
+          break;
         }
 
         case "Defender": {
           this.defenders.push(player.name);
+          break;
         }
 
         case "Midfielder": {
           this.midfielders.push(player.name);
+          break;
         }
 
         case "Attacker": {
           this.strikers.push(player.name);
+          break;
         }
 
       }
