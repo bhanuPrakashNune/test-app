@@ -24,7 +24,7 @@ tr:nth-child(even) {
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-weight: 250;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     text-align: center;
     letter-spacing: 0.23em;
@@ -38,7 +38,7 @@ tr:nth-child(odd) {
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-weight: 250;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     text-align: center;
     letter-spacing: 0.23em;
