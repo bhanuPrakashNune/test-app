@@ -64,9 +64,22 @@ export class AppComponent implements OnInit {
     return match1.matchday < match2.matchday ? 1 : -1;
   }
 
-  getDate(match: Match): string{
+  getDateUpcoming(match: Match): string{
    let date = this.datepipe.transform(match.utcDate, 'MMM dd, HH:mm');
    return date;
+  }
+
+  getDatePast(match: Match): string{
+    let date = this.datepipe.transform(match.utcDate, 'MMM dd');
+    return date;
+   }
+
+  aboutClick(trigger: number){
+    if(trigger == 0){
+      document.getElementById("aboutdiv").style.display = "block";
+    } else {
+      document.getElementById("aboutdiv").style.display = "none";
+    }
   }
 
   lastFivematch(match: Match[]){
