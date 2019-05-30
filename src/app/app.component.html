@@ -2,7 +2,7 @@
 <section>
 <div class = 'myclasssize' >
         <div class = 'topbar'>
-            <h1 id = 'about'>ABOUT</h1>
+            <h1 id = 'about' (click)="aboutClick(0)">ABOUT</h1>
                 <div id = 'logo'>
                  <img class = 'fade-in'id = 'SPFClogo'src="../assets/1776.png" alt="Sao Paulo Team logo">
                 </div>
@@ -29,7 +29,7 @@
                       <table>
                         <tr style = "line-height: 40px">{{pastGame.homeTeam.name}} <a id ='fs'style="font-weight:500px">{{pastGame.score.fullTime.homeTeam}} - {{pastGame.score.fullTime.awayTeam}} </a>{{pastGame.awayTeam.name}}</tr>
                         <tr style = "text-align: center; vertical-align: bottom">
-                          <td><span>{{getDate(pastGame)}}</span></td>
+                          <td><span>{{getDatePast(pastGame)}}</span></td>
                         </tr>
                       </table>
                     
@@ -51,7 +51,7 @@
                   <table>
                     <tr style = "line-height: 40px">{{upcomingGames.homeTeam.name}} - {{upcomingGames.awayTeam.name}}</tr>
                     <tr style = "text-align: center; vertical-align: bottom">
-                      <td><span>{{getDate(upcomingGames)}}</span></td>
+                      <td><span>{{getDateUpcoming(upcomingGames)}}</span></td>
                     </tr>
                   </table>
                 
@@ -72,6 +72,7 @@
             </ul>
       </div>
   </div>
+
 </section>
 
 
@@ -79,3 +80,15 @@
 <router-outlet >
   
 </router-outlet>
+
+<div id="aboutdiv">
+    <div id = 'logo'>
+        <img class = 'fade-in'id = 'SPFClogo'src="../assets/1776.png" alt="Sao Paulo Team logo">
+    </div>
+    <h1 id = 'about2' (click)="aboutClick(1)">BACK</h1>
+    <p style = "font-weight: 300; font-size: 12px; padding: 20px"><br><br><h1 style = "font-weight: 500">São Paulo FC</h1><br>São Paulo Futebol Clube , simply known as São Paulo, is a professional football club based in São Paulo, Brazil. The club plays in the Paulistão (the State of São Paulo's premier state league), as well as the Brasileirão (the top tier of the Brazilian football league system). As for international titles, SPFC is the most successful team from Brazil, with 12 international titles. It is also one of the most successful South American clubs in terms of overall titles, having won 21 state titles, six Brasileirão titles, three Copa Libertadores titles, one Copa Sudamericana, one Supercopa Libertadores, one Copa CONMEBOL, one Copa Masters CONMEBOL, two Recopa Sudamericanas, two Intercontinental Cup and one FIFA Club World Cup. Founded in 1930, São Paulo was an inaugural member of the Clube dos 13 group of Brazil's leading football clubs. The club's most consistent spell of success came in the 1990s, under coach Telê Santana, when it won three state titles, one national championship, two Copa Libertadores, two Recopa Sudamericanas, two Intercontinental Cups, one Supercopa Sudamericana, one Copa CONMEBOL, one Copa Masters CONMEBOL. São Paulo is the third best-supported club in Brazil, with over 16 million supporters. The team's traditional home kit is a white shirt with two horizontal stripes (one red and one black), white shorts and white socks. Its home ground is the 67,052-seater Morumbi football stadium in São Paulo, where it has played since 1947. The stadium was the venue for the Copa Libertadores finals of 1992, 1993, 1994, 2000, 2003, 2005 and 2006. São Paulo is the second richest Brazilian football club in terms of revenue, with an annual revenue of $111.9m (€78.2m), and the second nation's most valuable club, worth over $353.4m (€246.9m) in 2011.
+Source: https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_FC
+    
+    </p>
+    
+  </div>
