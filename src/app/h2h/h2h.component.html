@@ -1,37 +1,95 @@
 <section>
-<img src="../assets/1776.png" width="150" height="150" style = "position: relative; top: 35px">
+  <div id='logo'>
+    <img class='fade-in' id='SPFClogo' src="../assets/1776.png" alt="Sao Paulo Team logo" style=" width: 120px; height: 120px;">
+  </div>
 
-<div class = 'h2h-component'>
-  <table id = "winsDraws">
-    <tr style = "line-height: 80px; font-size: 50px">
-      <td id = "wins1">1</td>
-      <td id = "wins1">3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td id = "wins1" style = "vertical-align: bottom"><span style = "vertical-align: bottom; background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 3px 15px 3px 15px;">WINS</span></td>
-      <td id = "wins1" style = "vertical-align: bottom"><span style = "vertical-align: bottom; background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 3px 15px 3px 15px;">DRAWS</span></td>
-      <td style = "vertical-align: bottom"><span style = "vertical-align: bottom; background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 3px 15px 3px 15px;">WINS</span></td>
-    </tr>
-  </table>
-</div>
+  <div class='h2h-component'>
+    <table id="winsDraws">
+      <tr style="line-height: 80px; font-size: 50px">
+        <td id="wins1">{{homeWins}}</td>
+        <td id="wins1">{{draw}}</td>
+        <td>{{awayWins}}</td>
+      </tr>
+      <tr>
+        <td id="wins1" style="vertical-align: bottom"><span
+            style="vertical-align: bottom; background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 3px 15px 3px 15px;">WINS</span>
+        </td>
+        <td id="wins1" style="vertical-align: bottom"><span
+            style="vertical-align: bottom; background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 3px 15px 3px 15px;">DRAWS</span>
+        </td>
+        <td style="vertical-align: bottom"><span
+            style="vertical-align: bottom; background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 3px 15px 3px 15px;">WINS</span>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-<div class  = 'previousMatch' >
-    <table id = 'previousMatchContent' style="margin-left: auto; margin-right:auto;">
-        <tr style = "vertical-align: bottom">
-            <td><img src="../assets/1776.png" width="70" height="70" style = "margin-left: 30px"></td>
-            <td>
-              <div>
-                <table>
-                  <tr style = "line-height: 40px">home team name 1 - 3 away team name</tr>
-                  <tr style = "text-align: center; vertical-align: bottom">
-                    <td><span style = "vertical-align: bottom; background-color: #e3e3e3; border-radius: 10px 10px 0px 0px; padding: 3px 15px 7px 15px;">April 20</span></td>
-                  </tr>
-                </table>
-              </div>
-            </td>
-            <td><img src="../assets/1776.png" width="70" height="70" style = "margin-right: 30px"></td>
-        </tr>
+  <div id='logo'>
+    <img class='fade-in' id='SPFClogo' src="../assets/1779.png" alt="Sao Paulo Team logo" style="width: 120px; height: 120px;">
+  </div>
+
+  <div class='previousMatch'>
+    <table *ngFor="let item of pastGames2019" id='previousMatchContent'>
+
+      <tr style="vertical-align: bottom; padding: 10px">
+        <td><img src="../assets/{{item.homeTeam.id}}.png" width="70" height="70" style="margin-left: 30px"></td>
+        <td id='mylistcolor' style="text-align: center">
+
+          <table>
+            <tr style="line-height: 40px">{{item.homeTeam.name}} <a
+                style="font-weight:500px">{{item.score.fullTime.homeTeam}} - {{item.score.fullTime.awayTeam}}</a>
+              {{item.awayTeam.name}}</tr>
+            <tr style="text-align: center; vertical-align: bottom">
+              <td><span id='wrapper'>{{getDate(item)}}</span></td>
+            </tr>
+          </table>
+
+        </td>
+        <td><img src="../assets/{{item.awayTeam.id}}.png" width="70" height="70" style="margin-right: 30px"></td>
+      </tr>
+
+    </table>
+    <br>
+    <table *ngFor="let item of pastGames2018" id='previousMatchContent'>
+
+      <tr style="vertical-align: bottom; padding: 10px">
+        <td><img src="../assets/{{item.homeTeam.id}}.png" width="70" height="70" style="margin-left: 30px"></td>
+        <td id='mylistcolor' style="text-align: center">
+
+          <table>
+            <tr style="line-height: 40px">{{item.homeTeam.name}} <a
+                style="font-weight:500px">{{item.score.fullTime.homeTeam}} - {{item.score.fullTime.awayTeam}}</a>
+              {{item.awayTeam.name}}</tr>
+            <tr style="text-align: center; vertical-align: bottom">
+              <td><span id='wrapper'>{{getDate(item)}}</span></td>
+            </tr>
+          </table>
+
+        </td>
+        <td><img src="../assets/{{item.awayTeam.id}}.png" width="70" height="70" style="margin-right: 30px"></td>
+      </tr>
+
+    </table>
+    <br>
+    <table *ngFor="let item of pastGames2017" id='previousMatchContent'>
+
+      <tr style="vertical-align: bottom; padding: 10px">
+        <td><img src="../assets/{{item.homeTeam.id}}.png" width="70" height="70" style="margin-left: 30px"></td>
+        <td id='mylistcolor' style="text-align: center">
+
+          <table>
+            <tr style="line-height: 40px">{{item.homeTeam.name}} <a
+                style="font-weight:500px">{{item.score.fullTime.homeTeam}} - {{item.score.fullTime.awayTeam}}</a>
+              {{item.awayTeam.name}}</tr>
+            <tr style="text-align: center; vertical-align: bottom">
+              <td><span id='wrapper'>{{getDate(item)}}</span></td>
+            </tr>
+          </table>
+
+        </td>
+        <td><img src="../assets/{{item.awayTeam.id}}.png" width="70" height="70" style="margin-right: 30px"></td>
+      </tr>
+
     </table>
   </div>
 </section>

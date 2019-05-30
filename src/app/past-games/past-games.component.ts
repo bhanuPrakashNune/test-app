@@ -23,7 +23,7 @@ export class PastGamesComponent implements OnInit {
     try {
       const result: IAjaxResponse = await this.footballService.getPastGames();
       
-      if (!!result.data) {
+      if (result.data) {
         let data: IUpcomingGamesResponseData = result.data;
         this.pastGames = data.matches.sort(this.sortMatches);
         console.log(this.pastGames);

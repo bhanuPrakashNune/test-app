@@ -34,5 +34,9 @@ export class FootballService extends HttpService {
     return this.httpGet(url);
   }
 
+  getH2h(year : string): Promise<IAjaxResponse> {
+    const url: string = 'https://api.football-data.org/v2/competitions/BSA/matches?season='+year+'&status=FINISHED';
+    return this.httpGet(url);
+  }
 
 }

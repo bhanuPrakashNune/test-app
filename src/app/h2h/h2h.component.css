@@ -8,7 +8,6 @@
     font-size: 14px;
     letter-spacing: 0.15em;
     position: relative;
-    top: -100px;
     margin: auto;
 }
 
@@ -21,6 +20,11 @@ table#winsDraws {
 td#wins1{
     border-right: 2px solid #e3e3e3;
 }
+
+#logo{
+  text-align: center;
+}
+
 
 p{
     font-family: 'Montserrat', sans-serif;
@@ -37,15 +41,30 @@ p{
     margin-right: auto;
   }
   
+  
+  p{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.23em;
+    text-align: center;
+  }
+  
+  table{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   .previousMatch { 
     position: relative;
-    top: 0px;
-    margin: auto;
+    top: 30px;
   }
   
   #previousMatchContent{
     border: 2px solid #e3e3e3;
-    width: 45%;
+    width: 40%;
     height: 80px;  
     font-family: 'Montserrat', sans-serif;
     color: black;
@@ -54,13 +73,53 @@ p{
     line-height: 15px;
     text-align: center;
     letter-spacing: 0.15em;
+    margin-bottom: 10px;
   }
   
-  #score{
-    width:50px;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-weight: 500;
-    font-size: 12px;
-  
+
+
+table#previousMatchContent:nth-child(even) {
+    background:#E3E3E3;
+}
+
+table:nth-child(even) tr td#mylistcolor{
+  background:#E3E3E3;
+}
+table#previousMatchContent:nth-child(odd)  {
+    background-color: #FFFFFF;
+}
+
+a {
+  width:50px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+span {
+  vertical-align: bottom;
+  background-color: #e3e3e3; 
+  border-radius: 10px 10px 0px 0px; 
+  padding: 3px 15px 7px 15px;
+}
+
+table#previousMatchContent:nth-child(even) span{
+  background:#ffffff;
+
+ 
+}
+
+@media screen and (max-width: 500px) {
+  #previousMatchContent{
+    width: 70%;
   }
+  
+}
+
+@media screen and (max-width: 300px) {
+  #previousMatchContent{
+    width: 90%;
+  }
+  
+}
